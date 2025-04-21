@@ -1,14 +1,14 @@
 public class main {
     public static void main(String[] args) {
         //Aufgabe 1
-        /*Textbook t1 = new Textbook("Java Programming", "John Doe", "Computer Science", 2020);
+        Textbook t1 = new Textbook("Java Programming", "John Doe", "Computer Science", 2020);
         System.out.println(t1.getInfo());
 
         Book b1 = new Book("The Great Gatsby", "F. Scott Fitzgerald", 1925);
         System.out.println(b1.getInfo());
 
         Publication p1 = new Publication("To Kill a Mockingbird", 1960);
-        System.out.println(p1.getInfo());*/
+        System.out.println(p1.getInfo());
 
         //Aufgabe 3
         Inbox inbox = new Inbox(5);
@@ -22,31 +22,5 @@ public class main {
         mail1.setRead(true);
         inbox.countUnread();
         inbox.displayMailsHeader();
-        /*int n = 6;
-        int a = 0;
-        //1 = 1, 2 = 6, 3 = 21, 4 = 52, 5 = 105, 6 = 186
-        for(int i = 1; i < n; i++) {
-            int k = 1;
-            while (k < i) {
-                k++;
-            }
-            a = a + (2*k);
-            a++;
-        }
-        int b = 1;
-        for (int j = 1; j < n; j++) {
-            int p = 0;
-            for (int l = 1; l < n; l++) {
-                p = p + (2*l);
-            }
-            p = p / 2;
-            b = b + (2*p);
-        }
-
-        int c = a + b;
-        System.out.println("a: " + a);
-        System.out.println("b: " + b);
-        System.out.println("a+b: " + c);*/
-
     }
 }
