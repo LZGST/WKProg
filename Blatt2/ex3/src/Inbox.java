@@ -37,4 +37,20 @@ public class Inbox {
         }
         System.out.println("Number of unread mails: " + unreadCount);
     }
+
+    public Mail[] getMails() {
+        return mails;
+    }
+
+    public void setMails(Mail[] mails) {
+        this.mails = mails;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
 }
