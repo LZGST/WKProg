@@ -23,6 +23,7 @@ public class Inbox {
 
     public void open(int index) {
         if (index >= 0 && index < count) {
+            mails[index].setRead(true);
             System.out.println(mails[index].getInfo());
         } else {
             System.out.println("Invalid index");

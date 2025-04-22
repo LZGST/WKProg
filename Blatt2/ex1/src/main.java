@@ -1,14 +1,14 @@
 public class main {
     public static void main(String[] args) {
         //Aufgabe 1
-        Textbook t1 = new Textbook("Java Programming", "John Doe", "Computer Science", 2020);
+        /*Textbook t1 = new Textbook("Java Programming", "John Doe", "Computer Science", 2020);
         System.out.println(t1.getInfo());
 
         Book b1 = new Book("The Great Gatsby", "F. Scott Fitzgerald", 1925);
         System.out.println(b1.getInfo());
 
         Publication p1 = new Publication("To Kill a Mockingbird", 1960);
-        System.out.println(p1.getInfo());
+        System.out.println(p1.getInfo());*/
 
         //Aufgabe 3
         Inbox inbox = new Inbox(5);
@@ -19,7 +19,7 @@ public class main {
         inbox.addMail(mail1);
         inbox.addMail(mail2);
         inbox.addMail(mail3);
-        mail1.setRead(true);
+        inbox.open(0);
         inbox.countUnread();
         inbox.displayMailsHeader();
     }
