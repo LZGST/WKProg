@@ -7,6 +7,9 @@ public class Publication {
         this.year = year;
     }
 
+    public Publication() {
+    }
+
     public String getInfo() {
         return title + ", published in " + year;
     }
