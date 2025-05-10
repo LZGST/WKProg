@@ -1,0 +1,15 @@
+1) Implement the classes as described and add getters/setters/constructors -> Implemented
+
+2) Is your code an example of dependency injection? Explain why or why not.
+    -> Yes, because the class `Customer` is dependent on the class `Profile`, but it does not create an instance of `Profile` itself. Instead, it receives an instance of `Profile` through its constructor, which allows for more flexibility and easier testing.
+
+3) You realize that your code breaks the law of Demeter, explain why and what a possible fix looks like.
+    -> The law of Demeter states that a method should only call methods on:
+        - The object itself
+        - Objects passed as arguments
+        - Objects created within the method
+        - Direct component objects
+    In this case, the `Customer` class is calling methods on the `Profile` object, which is a direct component object.
+    But the class `Profile` also interacts with the `ShippingInfo` class, which is not a direct component of the `Customer` class.
+    This means that the `Customer` class is indirectly calling methods on the `ShippingInfo` class through the `Profile` class, which violates the law of Demeter.
+    To fix this, we could create a method in the `Customer` class that directly interacts with the `ShippingInfo` class, instead of calling methods on the `Profile` object directly.

@@ -1,0 +1,30 @@
+1) What do you think is the variant that makes more sense in this case? Pick one and justify your answer.
+
+Variant 2 — handle the exception in main
+
+Justification:
+Flexibility: The Calculator.divide method should focus on doing the calculation. It shouldn't assume how the error should be handled — maybe the caller wants to log, skip, retry, or rethrow.
+
+Separation of Concerns: divide should only divide; main should decide how to handle runtime errors.
+
+Reusability: If divide handles the exception internally, other parts of the program can’t respond differently.
+
+2) When does Variant 1 (handling inside the method) make more sense?
+
+Example: A library utility method that ensures graceful failure and consistent output without requiring every caller to handle errors.
+java
+Copy
+Edit
+public class SafeParser {
+    public static int parseInt(String s) {
+        try {
+            return Integer.parseInt(s);
+        } catch (NumberFormatException e) {
+            return -1; // sentinel value
+        }
+    }
+}
+Justification:
+For small, controlled cases like parsing, it can be more convenient and safe for the method to handle its own exceptions.
+
+This avoids repetitive try-catch blocks all over the code.
